@@ -1,0 +1,36 @@
+@import "compass/reset";
+@import "compass/css3";
+
+.effect {
+    width:190px;
+    position: relative;
+
+    &:before {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 3px;
+        width: 50%;
+        top: 80%;
+        max-width:155px;
+        max-height:18px;
+        background: #777;
+        @include box-shadow (0 15px 10px #777);
+        @include transform (rotate(-4deg));
+    }
+    &:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        right: 13px;
+        width: 50%;
+        top: 80%;
+        max-width:155px;
+        max-height:18px;
+        background: #777;
+        @include box-shadow (0 15px 10px #777);
+        @include transform (rotate(4deg));
+    }
+}
